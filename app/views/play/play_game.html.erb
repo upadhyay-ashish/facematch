@@ -1,0 +1,16 @@
+<h1>Play#play_game</h1>
+<p>Find me in app/views/play/play_game.html.erb</p>
+<%=  form_tag(:controller => "play", :action => "answer", :method => "get")%>
+<%= image_tag("#{@user.avatar.url}",:width=>200,:height=>200) %>
+<br></br>
+
+
+<%= @user.name  %>  <%= radio_button "","","#{@user.id}" %>
+<%= @user1.name  %>  <%= radio_button "","","#{@user1.id}" %>
+<%= @user2.name  %>  <%= radio_button "","","#{@user2.id}" %>
+<%= @user3.name  %>  <%= radio_button "","","#{@user3.id}" %>
+
+<%= submit_tag("ANSWER") %>
+
+
+
