@@ -1,5 +1,5 @@
-<h1>Play#play_game</h1>
-<center>
+
+<div style="margin-left: 600px">
 <%= link_to(image_tag("#{@user.avatar.url}",:width=>350,:height=>350),@user.avatar.url,:class=>("top_up")) %>
 <br></br>
 
@@ -9,7 +9,7 @@
 <%= @user2.name  %>  <%= radio_button "","","#{@user2.id}" %>
 <%= @user3.name  %>  <%= radio_button "","","#{@user3.id}" %>
 
-<%= submit_tag("ANSWER") %>
 
+<p><%= link_to "Back To List",users_path %></p>
 
-
+</div>
