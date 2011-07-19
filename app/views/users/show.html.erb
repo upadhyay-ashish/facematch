@@ -12,7 +12,7 @@
 
 <p>
   <b>Avatar:</b>
-  <%= image_tag("#{@user.avatar.url}",:width=>150,:height=>150)%>
+  <%= link_to(image_tag("#{@user.avatar.url}",:width=>250,:height=>250),@user.avatar.url,:class=>("top_up")) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
