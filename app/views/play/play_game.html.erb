@@ -1,15 +1,4 @@
-
-<div style="margin-left: 600px">
-<%= link_to(image_tag("#{@user.avatar.url}",:width=>350,:height=>350),@user.avatar.url,:class=>("top_up")) %>
-<br></br>
-
-
-<%= @user.name  %>  <%= radio_button "","","#{@user.id}" %>
-<%= @user1.name  %>  <%= radio_button "","","#{@user1.id}" %>
-<%= @user2.name  %>  <%= radio_button "","","#{@user2.id}" %>
-<%= @user3.name  %>  <%= radio_button "","","#{@user3.id}" %>
-
-
-<p><%= link_to "Back To List",users_path %></p>
-
-</div>
+<%= link_to(image_tag("#{@user[0].avatar.url}",:width => 250,:height=> 250),"#{@user[0].avatar.url}", :class => "top_up") %>
+<% @random_users.each do |user| %>
+<%= user.name %> <%= radio_button "","","#{user.id}" %>
+<% end %>
